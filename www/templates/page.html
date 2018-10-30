@@ -1,0 +1,48 @@
+<ion-view title="Page" id="page1">
+  <ion-content padding="true" class="has-header">
+    <h1 id="page-heading2" style="color:#000000;">Lab 2</h1>
+    <div id="page-markdown1" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">Text input 1: </p>
+    </div>
+    <form id="page-form1" class="list">
+      <label class="item item-input" id="page-input1">
+        <span class="input-label">Input</span>
+        <input type="text" placeholder="" ng-model="mdl.text1">
+      </label>
+    </form>
+    <div id="page-markdown2" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">Cool radio button family </p>
+    </div>
+    <form id="page-form2" class="list">
+      <ion-radio id="page-radio1" ng-model="mdl.radio1" value='1'>Radio</ion-radio>
+      <ion-radio id="page-radio2" ng-model="mdl.radio1" value='2'>Radio</ion-radio>
+    </form>
+    <div id="page-markdown3" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">Checkboxes</p>
+    </div>
+    <form id="page-form3" class="list">
+      <ion-checkbox id="page-checkbox1" ng-model="mdl.check1">Checkbox</ion-checkbox>
+      <ion-checkbox id="page-checkbox2" ng-model="mdl.check2">Checkbox</ion-checkbox>
+      <div id="page-markdown6" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">Slider</p>
+      </div>
+      <ion-item class="range range-positive" id="page-range1">Range
+        <input type="range" value="5" min="0" max="10" step="1" ng-model="mdl.range1">
+      </ion-item>
+      <ion-toggle toggle-class="toggle-positive" id="page-toggle1" ng-model="mdl.toggle1">Toggle</ion-toggle>
+
+      <button id="page-button1" class="button button-positive button-block" ng-click="resetButton()">Reset</button>
+
+      <button id="page-button2" class="button button-positive button-block" ui-sref="page2({text1: mdl.text1,
+      radio1: mdl.radio1, check1: mdl.check1, check2: mdl.check2, range1: mdl.range1, toggle1: mdl.toggle1})">Submit</button>
+
+    </form>
+    <p> Here are your inputs: </p>
+    <p> The value of the slider is: {{ mdl.text1 }} </p>
+    <p> The value of the radio is: {{ mdl.radio1 }} </p>
+    <p> The value of the checkbox1 is: {{ mdl.check1 }} </p>
+    <p> The value of the checkbox2 is: {{ mdl.check2 }} </p>
+    <p> The value of the range is: {{ mdl.range1 }} </p>
+    <p> The value of the toggle is: {{ mdl.toggle1 }} </p>
+  </ion-content>
+</ion-view>
